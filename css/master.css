@@ -1,0 +1,556 @@
+/*==============================Main Things===================================*/
+:root{
+    --fc:#754EF9;
+    --sc:#fff;
+    --tc:#000;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+/*    height: 9000px;*/
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+}
+.clear{
+    clear: both;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+/*=======================================header================================*/
+header{
+   
+    background-color: var(--fc);
+    height: 871px;
+    position: relative;
+}
+header .container{
+    display: flex;
+    height: 100%;
+    position: relative;
+    top:0;
+    padding-top: 20px;
+}
+header .image{
+    position: absolute;
+    z-index: 100;
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+    top: 130px;
+    border-radius: 50%;
+    background-color: var(--sc);
+    padding: 100px;
+    border: 20px solid var(--fc);
+    left: 150px;
+}
+header .image img{
+    width: 100%;
+    height: 100%;
+    border: 30px solid var(--fc);
+    border-radius: 50%;
+}
+header .overlay{
+    margin-top: 0;
+    width: 70%;
+    background-color: var(--sc);
+    height: 98%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+}
+header .left{
+    position: relative;
+    width: 30%;
+    left: 0;
+    overflow: hidden;
+}
+header .left h1,
+header .left h5{
+    color: var(--sc);
+}
+header .left h5{
+    position: absolute;
+    top: 92%;
+    font-weight: 400;
+}
+header .right{
+    margin-top: 0;
+    width: 70%;
+    height: 98%;
+    position: relative;
+    right: 0;
+    overflow: hidden;
+}
+header .right .nav{
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    left:10%;
+    
+}
+header .right .nav ul{
+    list-style: none;
+    text-align: center;
+    color: var(--tc);
+
+}
+header .right .nav ul li{
+    display: inline-block;
+    margin-left: 60px;
+    cursor: pointer;
+}
+header .right .nav ul .active{
+    background-color: var(--fc);
+    color: var(--sc);
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    
+}
+header .right .sub-grid{
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    position: relative;
+    height: 80%;
+}
+header .right .sub-grid .left{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+header .right .sub-grid .left .words{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    
+}
+header .right .sub-grid .left .words h1{
+    color: var(--tc);
+    font-size: 100px;
+    position: relative;
+}
+header .right .sub-grid .left .words h1 span{
+    color: var(--fc);
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+}
+header .right .sub-grid .left .words h1 span .one{
+    z-index: 4;
+}
+header .right .sub-grid .left .words h1 span .two{
+    z-index: 2;
+}
+header .right .sub-grid .left .words h1 span .first{
+    background-color: var(--sc);
+    width: 37%;
+    height: 10px;
+    position: absolute;
+    top:50%;
+    left: 3px;
+    transform: translate(0,-50%);
+    z-index: 3;
+}
+header .right .sub-grid .left .words h1 span .second{
+    background-color: var(--sc);
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    box-shadow: 0 1px 5px #777;
+    z-index: 1;
+}
+header .right .sub-grid .left .words h4{
+    font-size: 25px;
+    font-weight: 100;
+    
+}
+header .right .sub-grid .left .buttom-side{
+    display: flex;
+    position: relative;
+    top: 70%;
+    left: 80%;
+    transform: translate(-20%,-30%);
+    
+}
+header .right .sub-grid .left .buttom-side button{
+    border-radius: 50%;
+    padding: 30px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    background-color: var(--sc);
+    box-shadow: 2px 2px 5px #777;
+    
+    
+}
+header .right .sub-grid .left .buttom-side button:focus{
+    outline: none;
+}
+header .right .sub-grid .left .buttom-side h5:before{
+    content: '';
+    border-width: 10px 20px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--fc);
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    left: 3%;
+    cursor: pointer;
+}
+header .right .sub-grid .left .buttom-side h5{
+    position: static;
+    line-height: 5;
+    color: var(--tc);
+    margin-left: 15px;
+    
+}
+header .right .sub-grid .right{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding-top: 250%;
+    text-align: center;
+}
+header .right .sub-grid .right h5{
+    color: var(--fc);
+    transform: rotate(90deg); 
+    white-space: nowrap;
+    font-size: 16px;
+    position: relative;
+    margin-bottom: 160%;
+       
+}
+header .right .sub-grid .right h5:after{
+    content: '';
+    position: absolute;
+    width: 55px;
+    background-color: var(--fc);
+    height: 1px;
+    margin: 10px 10px;
+}
+header .right .sub-grid .right ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+header .right .sub-grid .right ul li{
+    margin-top: 12px;
+}
+header .right .sub-grid .right ul li a{
+    color: var(--fc);
+}
+/*=============================== about us ================================*/
+.about-us{
+    padding: 100px 0;
+}
+.about-us .container{
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 40px;
+}
+.about-us .content{
+    text-align: center;
+    box-shadow: 0 4px 30px #CCC;
+    padding: 70px;
+/*    border: 1px solid #000;*/
+}
+.about-us .content i{
+    font-size: 70px;
+    margin-bottom: 40px;
+    color: var(--fc);
+}
+.about-us .content h3{
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.about-us .content p{
+    color: #999;
+    text-align: justify;
+    margin-bottom: 60px;
+    text-align: center;
+    line-height: 1.7;
+}
+.about-us .content button{
+    padding: 7px 40px;
+    background-color: var(--fc);
+    color: var(--sc);
+    border: 1px solid var(--fc);
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.about-us .content button:focus{
+    outline: none;
+}
+/*================================ portfolio ============================*/
+.portfolio {
+    padding: 100px 0;
+    text-align: center;
+}
+.portfolio h2{
+    margin-bottom: 7px;
+    font-size: 30px;
+}
+.portfolio h4{
+    font-weight: 400;
+    color: #999;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.portfolio .sub-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "sec1 sec2 sec3"
+        "sec4 sec4 sec5"
+        "sec6 sec7 sec8";
+    grid-gap: 30px;
+    padding-top: 50px;
+}
+.portfolio .sub-grid img{
+    height: 352px;
+    width: 352px;
+}
+.portfolio .sub-grid:nth-child(1){
+    grid-area: sec1;
+}
+.portfolio .sub-grid:nth-child(2){
+    grid-area: sec2;
+}
+.portfolio .sub-grid:nth-child(3){
+    grid-area: sec3;
+}.
+portfolio .sub-grid:nth-child(5){
+    grid-area: sec5;
+}
+portfolio .sub-grid:nth-child(6){
+    grid-area: sec6;
+}
+portfolio .sub-grid:nth-child(7){
+    grid-area: sec7;
+}
+portfolio .sub-grid:nth-child(8){
+    grid-area: sec8;
+}
+.portfolio .sub-grid .special{
+    grid-area: sec4;
+/*    width: ;*/
+    overflow: hidden;
+    height: 352px;
+    padding-right: 32px;
+    position: relative;
+}
+.portfolio .sub-grid .special .ovarlay{
+    position: absolute;
+    width: 96%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: var(--fc);
+    opacity: 0.96;
+    
+}
+.portfolio .sub-grid .special img{
+    width: 100%;
+    z-index: 1;
+}
+.portfolio .sub-grid .special h2{
+    color: var(--sc);
+    z-index: 3;
+    position: relative;
+    margin-top: 13%;
+    margin-bottom: 10px;
+}
+.portfolio .sub-grid .special p{
+    color: #F3F3F3;
+    z-index: 3;
+    position: relative;
+    
+}
+.portfolio .sub-grid .special .full-view{
+    z-index: 3;
+    position: absolute;
+    bottom: 15px;
+    right: 50px;
+    color: var(--sc);
+    cursor: pointer;
+}
+.portfolio .sub-grid .special .full-view h5{
+    display: inline-block;
+    font-weight: 400;
+    margin-right: 7px;
+}
+.portfolio .sub-grid .special .full-view i{
+    font-size: 25px;
+    color: #F3F3F3;
+}
+/*============================testimonial=======================*/
+.testimonial {
+    padding: 100px 0;
+    text-align: center;
+}
+.testimonial h2{
+    margin-bottom: 7px;
+    font-size: 30px;
+}
+.testimonial .container>h4{
+    font-weight: 400;
+    color: #999;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.testimonial .back{
+    width: 775px;
+    height: 363px;
+    background-color: var(--sc);
+    position: relative;
+    margin: 60px auto;
+    box-shadow: 5px 5px 15px #CCC;
+    padding-top: 28px;
+}
+.testimonial .back:before{
+    content: '';
+    width: 45px;
+    height: 322px;
+    position: absolute;
+    background-color: var(--fc);
+    left: -45px;
+    top: 20.5px;
+    
+}
+.testimonial .back:after{
+    content: '';
+    width: 45px;
+    height: 322px;
+    position: absolute;
+    background-color: var(--fc);
+    right: -45px;
+    top: 20.5px;
+}
+.testimonial .back img{
+    border: 13px solid rgba(186,167,252,1);
+    background-color: rgba(152,123,251,1);
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 28px;
+}
+.testimonial .back h3{
+    margin-bottom: 24px;
+}
+.testimonial .back p{
+    color: #888;
+    line-height: 1.7;
+}
+.testimonial .btn-container{
+    text-align: center;
+}
+.testimonial .btn-container span{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.testimonial .btn-container span.active{
+    background-color: var(--fc);
+    transform: scale(1.2,1.2);
+}
+/*==================================contact Us==============================*/
+.contact-us {
+    padding: 100px 0;
+    text-align: center;
+}
+.contact-us h2{
+    margin-bottom: 7px;
+    font-size: 30px;
+}
+.contact-us .container>h4{
+    font-weight: 400;
+    color: #999;
+    font-size: 17px;
+    margin-bottom: 100px;
+}
+.contact-us .subinput{
+    height: 55px;
+    padding: 0;
+    margin: 0 auto;
+    
+}
+.contact-us .subinput input{
+    height: 55px;
+    width: 382px;
+    border: 1px solid var(--fc);
+    margin-right: 0;
+    position: relative;
+    padding: 5px 15px;
+}
+.contact-us .subinput button{
+    height: 55px;
+    width: 185px;
+    border: 1px solid var(--fc);
+    color: var(--sc);
+    background-color: var(--fc);
+    margin-left: 0;
+    position: relative;
+    left: -5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    top: 1px;
+}
+.contact-us .subinput button:focus,
+.contact-us .subinput input:focus{
+    outline: 0;
+}
+/*====================================footer============================*/
+footer{
+    margin-top: 100px;
+    background-color: var(--fc);
+    padding: 50px 0;
+    color:var(--sc);
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+footer .container .list-center,
+footer .container .list-right{
+    list-style: none;
+}
+footer .container .list-center li,
+footer .container .list-right li{
+    display: inline-block;
+    margin-right: 30px;
+    font-weight: 400;
+}
+footer .container .list-center li{
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+footer .container .list-right li a{
+    color: var(--sc);
+    font-size: 24px;
+}
